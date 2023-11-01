@@ -45,11 +45,13 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'plan',
     'plandoctor',
+    'planentity',
     'doctor',
     'hospital',
     'area',
     'product',
     'Lookups',
+    'entity',
 ]
 
 MIDDLEWARE = [
