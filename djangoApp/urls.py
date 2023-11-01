@@ -38,6 +38,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('plan/', include("plan.api.urls")),
+    path('plan/', include('plandoctor.api.urls')),
 
     path('__debug__/', include("debug_toolbar.urls")),
     path('solomon/', include('authentication.api.urls')),
