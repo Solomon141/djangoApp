@@ -41,12 +41,16 @@ urlpatterns = [
     path('plan/', include('plandoctor.api.urls')),
     path('planentity/', include('planentity.api.urls')),
     path('prescription/', include('prescription.api.urls')),
+    path('hospital/', include('hospital.api.urls')),
+    path('doctor/', include('doctor.api.urls')),
+    path('product/', include('product.api.urls')),
+    path('business/', include('entity.api.urls')),
 
-
-    path('__debug__/', include("debug_toolbar.urls")),
     path('solomon/', include('authentication.api.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
+    path('__debug__/', include("debug_toolbar.urls")),
+
     path('badreg/', schema_view.with_ui('swagger',
                                  cache_timeout=0), name='schema-swagger-ui'),
     path("redoc", schema_view.with_ui('redoc',

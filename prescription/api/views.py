@@ -7,17 +7,6 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 # Create your views here.
-class PrescriptionGET(ListCreateAPIView):
-    serializer_class = PrescriptionViewSerializer
-    def get_queryset(self):
-        return Prescription.objects.all()
-    
-class PrescriptionSAVE(ListCreateAPIView):
-    serializer_class = PrescriptionSerializer
-    def perform_create(self, serializer):
-        return serializer.save()
-
-
 @api_view(['GET'])
 def prescription_get(request):
     data = Prescription.objects.all()

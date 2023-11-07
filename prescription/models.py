@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from product.models import Badreg
 from doctor.models import Doctor
+# from hospital.models import Hospital
 
 # Create your models here.
 class Prescription(models.Model):
@@ -10,7 +11,7 @@ class Prescription(models.Model):
     pdate = models.DateField(auto_now=False, auto_now_add=False)
     doctor = models.ForeignKey(Doctor, related_name="pres_doctor", on_delete=models.CASCADE)
     product = models.ForeignKey(Badreg, related_name="pres_product", on_delete=models.CASCADE)
-    # hospital = models.ForeignKey(Badreg, related_name="pres_hosp", on_delete=models.CASCADE)
+    # hospital = models.ForeignKey(Hospital, related_name="pres_hosp", on_delete=models.CASCADE)
     qty = models.IntegerField()
 
     def __str__(self):
