@@ -8,6 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(max_length=255, min_length=2)
     last_name = serializers.CharField(max_length=255, min_length=2)
     # tokens = CustomTokenObtainPairSerializer()
+    groups = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = User

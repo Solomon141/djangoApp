@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'product',
     'Lookups',
     'entity',
+    'prescription',
 ]
 
 MIDDLEWARE = [

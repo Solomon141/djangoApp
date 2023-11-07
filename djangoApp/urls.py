@@ -40,6 +40,7 @@ urlpatterns = [
     path('plan/', include("plan.api.urls")),
     path('plan/', include('plandoctor.api.urls')),
     path('planentity/', include('planentity.api.urls')),
+    path('prescription/', include('prescription.api.urls')),
 
 
     path('__debug__/', include("debug_toolbar.urls")),
