@@ -12,6 +12,8 @@ class Prescription(models.Model):
     doctor = models.ForeignKey(Doctor, related_name="pres_doctor", on_delete=models.CASCADE)
     product = models.ForeignKey(Badreg, related_name="pres_product", on_delete=models.CASCADE)
     hospital = models.ForeignKey(Hospital, related_name="pres_hosp", on_delete=models.CASCADE, null=True)
+    p_fullname = models.CharField(max_length=50, null=True)
+    p_age = models.CharField(max_length=50, null=True)
     qty = models.IntegerField()
 
     def __str__(self):

@@ -10,6 +10,7 @@ class PrescriptionSerializer(serializers.ModelSerializer):
 class PrescriptionViewSerializer(serializers.ModelSerializer):
     doctor = serializers.StringRelatedField(read_only=True)
     product = serializers.StringRelatedField(read_only=True)
+    hospital = serializers.StringRelatedField(read_only=True)
     created_by = serializers.StringRelatedField(read_only=True) 
     class Meta:
         model = Prescription
