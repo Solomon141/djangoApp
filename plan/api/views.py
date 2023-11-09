@@ -34,7 +34,6 @@ class PlanMonthly(ListCreateAPIView):
     def get_queryset(self):
         pyear = self.kwargs['pyear']
         pmonth = self.kwargs['pmonth']
-
        
         dateMax = datetime.datetime(pyear, pmonth+1, 1)
         dateMin = datetime.datetime(pyear, pmonth, 1)

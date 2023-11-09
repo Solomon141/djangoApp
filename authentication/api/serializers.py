@@ -1,6 +1,9 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User, Group
+from rest_framework.decorators import authentication_classes, permission_classes
 
+@authentication_classes([])
+@permission_classes([])
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         max_length=65, min_length=8, write_only=True)
@@ -24,7 +27,11 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         createdUser = User.objects.create_user(**validated_data)
         return createdUser
-
+    
+    
+    
+@authentication_classes([])
+@permission_classes([])
 class LoginSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         max_length=65, min_length=8, write_only=True)
