@@ -13,5 +13,5 @@ class PlanDoctor_Text_Serializer(serializers.ModelSerializer):
     products = serializers.StringRelatedField()
     class Meta:
         model = PlanDoctor
-        fields = ['purpose', 'doctors', 'products', 'planid']
+        fields = ['id', 'purpose', 'doctors', 'products', 'planid']
         # read_only_fields = ['id','created_by']
