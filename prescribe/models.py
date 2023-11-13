@@ -3,8 +3,9 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Prescribe(models.Model):
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    pres_code = models.CharField(max_length=10, null=True)
     hosp_name = models.CharField(max_length=255, null=True)
     patient_name = models.CharField(max_length=255, null=True)
     patient_phone = models.CharField(max_length=255, null=True)

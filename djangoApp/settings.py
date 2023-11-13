@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'Lookups',
     'entity',
     'prescription',
+    'prescribe',
+    
 ]
 
 MIDDLEWARE = [
