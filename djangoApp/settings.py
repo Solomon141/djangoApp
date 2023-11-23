@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'entity',
     'prescription',
     'prescribe',
-    
 ]
 
 MIDDLEWARE = [
